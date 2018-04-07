@@ -1,0 +1,23 @@
+diff --git a/foo.s b/foo.s
+index 6503b3e..6789f6f 100644
+--- a/foo.s
++++ b/foo.s
+@@ -8,8 +8,6 @@ _ZStL19piecewise_construct:
+ 	.comm	_ZStL8__ioinit,1,1
+ .LC0:
+ 	.string	"HelloWorld!"
+-.LC1:
+-	.string	"2"
+ 	.text
+ 	.globl	main
+ 	.type	main, @function
+@@ -24,9 +22,6 @@ main:
+ 	leaq	.LC0(%rip), %rsi
+ 	leaq	_ZSt4cout(%rip), %rdi
+ 	call	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@PLT
+-	leaq	.LC1(%rip), %rsi
+-	leaq	_ZSt4cout(%rip), %rdi
+-	call	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@PLT
+ 	movl	$0, %eax
+ 	popq	%rbp
+ 	.cfi_def_cfa 7, 8

@@ -8,8 +8,6 @@ _ZStL19piecewise_construct:
 	.comm	_ZStL8__ioinit,1,1
 .LC0:
 	.string	"HelloWorld!"
-.LC1:
-	.string	"2"
 	.text
 	.globl	main
 	.type	main, @function
@@ -22,9 +20,6 @@ main:
 	movq	%rsp, %rbp
 	.cfi_def_cfa_register 6
 	leaq	.LC0(%rip), %rsi
-	leaq	_ZSt4cout(%rip), %rdi
-	call	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@PLT
-	leaq	.LC1(%rip), %rsi
 	leaq	_ZSt4cout(%rip), %rdi
 	call	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@PLT
 	movl	$0, %eax
